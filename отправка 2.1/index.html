@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>uniMail</title>
+	<link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+	<a href="javascript:PopUpShow()">Задать вопрос</a>
+	<div class="b-popup" id="popup1">
+		<div class="b-popup-content">
+			<form>
+
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="Типография">
+				<input type="hidden" name="admin_email" value="akiselev891@gmail.com">
+				<input type="hidden" name="form_subject" value="Вопрос с сайта">
+				<!-- END Hidden Required Fields -->
+
+				<input type="text" name="Имя" placeholder="Имя" required><br>
+				<input type="text" name="E-mail" placeholder="E-mail" required><br>
+				<input type="text" name="Сообщение" placeholder="Ваш вопрос" required><br>
+				<button>Отправить</button>
+
+			</form>
+			<a href="javascript:PopUpHide()">Закрыть</a>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="js/script.js"></script>
+
+</body>
+
+</html>
