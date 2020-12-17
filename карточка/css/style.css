@@ -1,0 +1,57 @@
+.container{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+/* ___________________________ */
+
+
+
+
+.liner {
+    display: block;
+    margin: 10px 0;
+    height: 1px;
+    width: 100%;
+    background: rgb(68, 63, 63);
+}
+
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card {
+    width: 276px;
+    height: 374px;
+    position: relative;
+    perspective: 1000px;
+}
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+.front {
+    background-color: rgb(78, 52, 150);
+    display: flex;
+    flex-direction: column;
+}
+.back {
+    background-color: #bdbdbd;
+    transform: rotateY(180deg);
+}
+
+.go {
+    transform: rotateY(180deg);
+}
