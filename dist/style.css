@@ -1,0 +1,97 @@
+.cads-flip {
+	display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+
+.wrapper {
+	width: 269px;
+}
+
+.card-container {
+	transition: width 200ms linear 0s;
+	perspective: 1000px;	
+	width: 100%;
+	height: 23em;
+  	margin: 0em auto;
+	font-family: "Roboto", sans-serif;
+	font-size: 1em;
+}
+
+.card-container .flip-animation {
+	transform: rotateY(0deg);
+}
+
+.card-container.addFlip .flip-animation,
+ .card-container.addFlip .flip-animation ~ .backCard {
+	transform: rotateY(180deg);
+}
+
+.flip-animation {
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 550ms linear 0s;
+}
+/* создаются js */
+.wrapper.frontback-cards .item-card {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+.wrapper.frontback-cards .item-card-details {
+	z-index: 1;
+	transform: rotateY(180deg);
+}
+
+.wrapper.frontback-cards .item-card,
+.wrapper.frontback-cards .item-card-details {
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+/* ------------------------------ */
+.item-card,
+.item-card-details {
+	display: -webkit-box; 
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex; 
+ 	-webkit-flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
+	background: #7c8084;
+}
+
+.featured-image {
+	width: 100%;
+	object-fit: cover;
+	height: 100%;
+	position: relative;
+}
+
+
+.wrapper .front-buttons,
+.wrapper .back-arrow {
+	display: none;
+}
+
+.wrapper.frontback-cards .front-buttons,
+.wrapper.frontback-cards .back-arrow {
+	display: block;
+}
+
+.wrapper .on-back {
+	width: 100%;
+	border-radius: 0 0 0.45em 0.45em;
+}
+
+.wrapper.frontback-cards .on-back {
+	width: 50%;
+	border-radius: 0 0 0.45em 0;
+}
